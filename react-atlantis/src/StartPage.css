@@ -1,0 +1,16 @@
+.MDBNavbar
+{
+ background-color: transparent;
+
+}
+.MDBNavbar:hover
+{
+    background-color:rgb(46, 41, 77);
+
+}
+.bookbtn:hover
+{
+    color: DarkGoldenRod;
+   
+
+}
