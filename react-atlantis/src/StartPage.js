@@ -31,7 +31,7 @@ export default function StartPage(){
     return(
             <div>
             
-            <header   style={{marginTop:140}}>
+            <header   style={{marginTop:110}}>
       <MDBNavbar   bgColor='blue' expand='lg' >
         <MDBContainer  className='Headercss' fluid>
           <MDBNavbarToggler
@@ -61,9 +61,9 @@ export default function StartPage(){
 
               <MDBNavbarItem>
         <img
-        style={{marginLeft:370, marginTop:-100,marginBottom:60}}
+        style={{marginLeft:370, marginTop:-50,marginBottom:60}}
 
-        width={150}
+        width={200}
         height={120}
           src='https://www.immostyle.it/images/travelstyle/dubai/logo-atlantis.png'
          
@@ -71,7 +71,7 @@ export default function StartPage(){
         />
               </MDBNavbarItem>
               <MDBNavbarItem>
-              <MDBBtn className='bookbtn' lg color='light' style={{marginLeft:540,color:'DarkGoldenRod'}}>
+              <MDBBtn className='bookbtn' lg color='light' style={{marginLeft:500,color:'DarkGoldenRod'}}>
         Book Now
       </MDBBtn>
               </MDBNavbarItem>
