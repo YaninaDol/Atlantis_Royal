@@ -147,11 +147,11 @@ export default function StartPage(){
 
     </Carousel>
 
-    <div  style={{marginLeft:200}}>
+    <div  style={{marginLeft:200,marginTop:20}}>
     <MDBContainer style={{display:'flex'}} >
     
-      <Form.Group  style={{width:450,marginLeft:10}} className="mb-6" controlId="exampleForm.ControlInput1">
-        <Form.Label>CHECK IN</Form.Label>
+      <Form.Group  style={{width:450,marginLeft:10}} className="mb-6" >
+        <Form.Label style={{color:'navy'}}>CHECK IN</Form.Label>
         <Form.Control
                 type="date"
                 name="datepic"
@@ -161,8 +161,8 @@ export default function StartPage(){
               />
       
       </Form.Group>
-      <Form.Group style={{width:450,marginLeft:10}} className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>CHECK OUT</Form.Label>
+      <Form.Group style={{width:450,marginLeft:10}} className="mb-3">
+        <Form.Label style={{color:'navy'}}>CHECK OUT</Form.Label>
         <Form.Control
                 type="date"
                 name="datepic"
@@ -173,8 +173,8 @@ export default function StartPage(){
       
       </Form.Group>
 
-      <Form.Group style={{width:200,marginLeft:20}} className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>ADULTS</Form.Label>
+      <Form.Group style={{width:200,marginLeft:20}} className="mb-3" c>
+        <Form.Label style={{color:'navy'}}>ADULTS</Form.Label>
         <Form.Select onChange={(e)=>setAdult(e.target.value )}>
        
        <option value="1">1</option>
@@ -188,8 +188,8 @@ export default function StartPage(){
       
       </Form.Group>
 
-      <Form.Group style={{width:200,marginLeft:20}} className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>CHILDRENS</Form.Label>
+      <Form.Group style={{width:200,marginLeft:20}} className="mb-3" >
+        <Form.Label style={{color:'navy'}}>CHILDRENS</Form.Label>
         <Form.Select onChange={(e)=>setChildren(e.target.value )}>
         <option selected value="0">0</option>
        <option value="1">1</option>
@@ -202,17 +202,35 @@ export default function StartPage(){
      </Form.Select>
       
       </Form.Group>
-      <Form.Group  style={{marginLeft:200}} className="mb-3" controlId="exampleForm.ControlInput1">
-      <Form.Label style={{width:200}}>AVAILABILITY</Form.Label>
-      <Form.Label></Form.Label>
+      <Form.Group  style={{marginLeft:200}} className="mb-3" >
+      <Form.Label style={{width:200,color:'navy'}}>AVAILABILITY</Form.Label>
+      <Form.Label ></Form.Label>
       <Button variant="secondary">CHECK AVAILABILITY</Button>
       </Form.Group>
       </MDBContainer >
     </div>
 
+    <div style={{marginTop:100}} className='mainheader'>
+    <h2 class="mainTitle">THIS IS THE MOST ULTRA-LUXURY<br/> EXPERIENTIAL RESORT IN THE WORLD</h2>
+    <span className='titleUnderline'></span>
+    <div class="mainTitleText">
+      The new iconic landmark of Dubai, Atlantis The Royal welcomes you to an experience that will completely redefine
+      
+       your perspective of luxury. Crafted by the world’s leading designers, architects and artists, this is a destination where everything has been
+        designed to challenge the boundaries of imagination.
+
+Be taken on a journey of the impossible, with artful masterpieces, iconic entertainment and beautiful
+ craftsmanship at every turn.
+Where the highest level of service sets a new standard in excellence.
+
+This is the place where something incredible happens at every moment of your stay.
+
+This is Atlantis The Royal. 
+
+</div>
 
 
-
+    </div>
 
             </div>
       )
