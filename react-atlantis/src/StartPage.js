@@ -3,15 +3,14 @@ import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import showRoomItem from './showRoomsItem';
 import {
 
     MDBNavbarNav,
     MDBNavbarItem,
     MDBNavbarLink,
     MDBNavbarToggler,
-
     MDBIcon,
- 
      MDBContainer,
     MDBNavbar,
     MDBBtn,
@@ -76,7 +75,7 @@ export default function StartPage(){
         />
               </MDBNavbarItem>
               <MDBNavbarItem>
-              <MDBBtn className='bookbtn' lg color='light' style={{marginLeft:500,color:'DarkGoldenRod'}}>
+              <MDBBtn className='bookbtn' href='#booking' lg color='light' style={{marginLeft:500,color:'DarkGoldenRod'}}>
         Book Now
       </MDBBtn>
               </MDBNavbarItem>
@@ -147,7 +146,7 @@ export default function StartPage(){
 
     </Carousel>
 
-    <div  style={{marginLeft:200,marginTop:20}}>
+    <div id='booking'  style={{marginLeft:200,marginTop:20}}>
     <MDBContainer style={{display:'flex'}} >
     
       <Form.Group  style={{width:450,marginLeft:10}} className="mb-6" >
@@ -231,7 +230,7 @@ This is Atlantis The Royal.
 
 
     </div>
-
+  
             </div>
       )
 }
