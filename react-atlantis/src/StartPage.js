@@ -1,28 +1,33 @@
+import './StartPage.css';
 import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import {
-    MDBNavbar,
+
     MDBNavbarNav,
     MDBNavbarItem,
     MDBNavbarLink,
     MDBNavbarToggler,
-    MDBContainer,
+
     MDBIcon,
-    MDBCollapse,
+ 
+     MDBContainer,
+    MDBNavbar,
     MDBBtn,
-    MDBFooter,
-    MDBInput,
-    MDBCol,
-    MDBRow,
-    MDBTypography,
-    MDBCard,
-    MDBCardBody,
-    MDBCardImage
+    MDBDropdown,
+    MDBDropdownToggle,
+    MDBDropdownMenu,
+    MDBDropdownItem,
+    MDBCollapse,
   } from 'mdb-react-ui-kit';
 
 export default function StartPage(){
     const [showBasic, setShowBasic] = useState(false);
-  
+    const [startDate, setStartDate] = useState(Date.now());
+    const [endDate, setEndDate] = useState(Date.now());
+    const [adult, setAdult] = useState(0);
+    const [children, setChildren] = useState(0);
 
 
 
@@ -32,7 +37,7 @@ export default function StartPage(){
             <div>
             
             <header   style={{marginTop:110}}>
-      <MDBNavbar   bgColor='blue' expand='lg' >
+      <MDBNavbar    expand='lg' >
         <MDBContainer  className='Headercss' fluid>
           <MDBNavbarToggler
             onClick={() => setShowBasic(!showBasic)}
@@ -64,7 +69,7 @@ export default function StartPage(){
         style={{marginLeft:370, marginTop:-50,marginBottom:60}}
 
         width={200}
-        height={120}
+        height={130}
           src='https://www.immostyle.it/images/travelstyle/dubai/logo-atlantis.png'
          
           alt=''
@@ -93,8 +98,7 @@ export default function StartPage(){
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3 style={{color:'black'}}>WELCOME</h3>
-          <p style={{color:'black'}}>Our store is the most bigger in smartphones worlds.</p>
+        
         </Carousel.Caption>
       </Carousel.Item>
      
@@ -143,7 +147,73 @@ export default function StartPage(){
 
     </Carousel>
 
-            
+    <div  style={{marginLeft:200}}>
+    <MDBContainer style={{display:'flex'}} >
+    
+      <Form.Group  style={{width:450,marginLeft:10}} className="mb-6" controlId="exampleForm.ControlInput1">
+        <Form.Label>CHECK IN</Form.Label>
+        <Form.Control
+                type="date"
+                name="datepic"
+                placeholder="Start Date"
+                value={startDate}
+                onChange={(e) => setStartDate(e.target.value)}
+              />
+      
+      </Form.Group>
+      <Form.Group style={{width:450,marginLeft:10}} className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>CHECK OUT</Form.Label>
+        <Form.Control
+                type="date"
+                name="datepic"
+                placeholder="DateRange"
+                value={endDate}
+                onChange={(e) => setEndDate(e.target.value)}
+              />
+      
+      </Form.Group>
+
+      <Form.Group style={{width:200,marginLeft:20}} className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>ADULTS</Form.Label>
+        <Form.Select onChange={(e)=>setAdult(e.target.value )}>
+       
+       <option value="1">1</option>
+                 <option selected value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+                 <option value="6">6</option>
+
+     </Form.Select>
+      
+      </Form.Group>
+
+      <Form.Group style={{width:200,marginLeft:20}} className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>CHILDRENS</Form.Label>
+        <Form.Select onChange={(e)=>setChildren(e.target.value )}>
+        <option selected value="0">0</option>
+       <option value="1">1</option>
+                 <option  value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                 <option value="5">5</option>
+                 <option value="6">6</option>
+
+     </Form.Select>
+      
+      </Form.Group>
+      <Form.Group  style={{marginLeft:200}} className="mb-3" controlId="exampleForm.ControlInput1">
+      <Form.Label style={{width:200}}>AVAILABILITY</Form.Label>
+      <Form.Label></Form.Label>
+      <Button variant="secondary">CHECK AVAILABILITY</Button>
+      </Form.Group>
+      </MDBContainer >
+    </div>
+
+
+
+
+
             </div>
       )
 }
